@@ -1,0 +1,53 @@
+[
+  {
+    "date":                             "01-Dec-17",
+    "myhome_9under_21over":             1.120,
+    "myhome_9under_20under":            1.020,
+    "myhome_9over_21over_20160129":     1.250,
+    "myhome_9over_21over_20160130":     1.150,
+    "myhome_9over_21under_20160129":    1.560,
+    "myhome_9over_21under_20160130":    1.460,
+    "myhome_commission_evaluation":     0.55,
+    "myhome_commission_other":          0.8,
+    "conversion_21over":                1.120,
+    "conversion_20under":               1.120,
+    "conversion_commission_evaluation": 0.55,
+    "conversion_commission_other":      0.66,
+    "bridge_commission_basic":          54000,
+    "bridge_commission_add":            0.40
+  },
+  {
+    "date":                             "01-Jan-17",
+    "myhome_9under_21over":             1.150,
+    "myhome_9under_20under":            1.020,
+    "myhome_9over_21over_20160129":     1.250,
+    "myhome_9over_21over_20160130":     1.150,
+    "myhome_9over_21under_20160129":    1.560,
+    "myhome_9over_21under_20160130":    1.460,
+    "myhome_commission_evaluation":     0.55,
+    "myhome_commission_other":          0.8,
+    "conversion_21over":                1.120,
+    "conversion_20under":               1.120,
+    "conversion_commission_evaluation": 0.55,
+    "conversion_commission_other":      0.66,
+    "bridge_commission_basic":          54000,
+    "bridge_commission_add":            0.40
+  },
+  {
+    "date":                             "20-Feb-17",
+    "myhome_9under_21over":             1.100,
+    "myhome_9under_20under":            0.990,
+    "myhome_9over_21over_20160129":     1.230,
+    "myhome_9over_21over_20160130":     1.120,
+    "myhome_9over_21under_20160129":    1.540,
+    "myhome_9over_21under_20160130":    1.430,
+    "myhome_commission_evaluation":     0.5,
+    "myhome_commission_other":          0.8,
+    "conversion_21over":                1.100,
+    "conversion_20under":               0.990,
+    "conversion_commission_evaluation": 0.55,
+    "conversion_commission_other":      0.66,
+    "bridge_commission_basic":          54000,
+    "bridge_commission_add":            0.40
+  }
+]
