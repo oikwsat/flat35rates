@@ -1,6 +1,6 @@
 [
   {
-    "date":                             "01-Dec-17",
+    "date":                             "Dec-16",
     "myhome_9under_21over":             1.120,
     "myhome_9under_20under":            1.020,
     "myhome_9over_21over_20160129":     1.250,
@@ -17,7 +17,7 @@
     "bridge_commission_add":            0.40
   },
   {
-    "date":                             "01-Jan-17",
+    "date":                             "Jan-17",
     "myhome_9under_21over":             1.150,
     "myhome_9under_20under":            1.020,
     "myhome_9over_21over_20160129":     1.250,
@@ -34,7 +34,7 @@
     "bridge_commission_add":            0.40
   },
   {
-    "date":                             "20-Feb-17",
+    "date":                             "Feb-17",
     "myhome_9under_21over":             1.100,
     "myhome_9under_20under":            0.990,
     "myhome_9over_21over_20160129":     1.230,
@@ -51,7 +51,7 @@
     "bridge_commission_add":            0.40
   },
   {
-    "date":                             "02-Mar-17",
+    "date":                             "Mar-17",
     "myhome_9under_21over":             1.120,
     "myhome_9under_20under":            1.010,
     "myhome_9over_21over_20160129":     1.250,
@@ -67,5 +67,4 @@
     "bridge_commission_basic":          54000,
     "bridge_commission_add":            0.40
   }
-
 ]
