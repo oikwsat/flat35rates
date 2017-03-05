@@ -5,30 +5,42 @@
 // chart.js グラフデータセット生成
 var datasetConstructor = function(label, color){
   return {
-    label: label, // need
+    label: label,
     fill: false,
-    borderWidth: 2,
-    borderColor: color, // need
-    backgroundColor: color, // need
-    pointBorderColor: "#fff",
-    tension: 0,
+    lineTension: 0.1,
+    backgroundColor: color,
+    borderColor: color,
+    borderCapStyle: 'butt',
+    borderDash: [],
+    borderDashOffset: 0.0,
+    borderJoinStyle: 'miter',
+    pointBorderColor: color,
+    pointBackgroundColor: "#fff",
+    pointBorderWidth: 1,
+    pointHoverRadius: 5,
+    pointHoverBackgroundColor: color,
+    pointHoverBorderColor: color,
+    pointHoverBorderWidth: 2,
+    pointRadius: 1,
+    pointHitRadius: 10,
+    spanGaps: false,
     data: []
   };
 };
 
 var dates = Array();
 // フラット35
-var myhome_9under_21over              = new datasetConstructor("融資率9割以下 返済期間が21年以上", "rgba(2,63,138,0.8)");
-var myhome_9under_20under             = new datasetConstructor("融資率9割以下 返済期間が20年以下", "rgba(201,60,58,0.8)");
-var myhome_9over_21over_20160129      = new datasetConstructor('融資率9割超 返済期間が21年以上 (2016.1.29迄)', "rgba(2,63,138,0.8)");
-var myhome_9over_21over_20160130      = new datasetConstructor('融資率9割超 返済期間が21年以上 (2016.1.30以降)', "rgba(2,63,138,0.8)");
-var myhome_9over_21under_20160129     = new datasetConstructor('融資率9割超 返済期間が20年以下 (2016.1.29迄)', "rgba(2,63,138,0.8)");
-var myhome_9over_21under_20160130     = new datasetConstructor('融資率9割超 返済期間が20年以下 (2016.1.30以降)', "rgba(2,63,138,0.8)");
-var myhome_commission_evaluation      = new datasetConstructor('融資手数料 住宅性能評価物件', "rgba(2,63,138,0.8)");
-var myhome_commission_other           = new datasetConstructor('融資手数料 その他物件', "rgba(2,63,138,0.8)");
+var myhome_9under_21over              = new datasetConstructor('融資率9割以下 返済21年以上',              'rgba(  2, 63,138,0.8)');
+var myhome_9under_20under             = new datasetConstructor('融資率9割以下 返済20年以下',              'rgba( 75,192,192,0.8)');
+var myhome_9over_21over_20160129      = new datasetConstructor('融資率9割超 返済21年以上 (16.1.29迄)',    'rgba(139,  0,139,0.8)');
+var myhome_9over_21over_20160130      = new datasetConstructor('融資率9割超 返済21年以上 (16.1.30以降)',  'rgba(255,  0,  0,0.8)');
+var myhome_9over_21under_20160129     = new datasetConstructor('融資率9割超 返済20年以下 (16.1.29迄)',    'rgba(255,  0,255,0.8)');
+var myhome_9over_21under_20160130     = new datasetConstructor('融資率9割超 返済20年以下 (16.1.30以降)',  'rgba(250,128,114,0.8)');
+var myhome_commission_evaluation      = new datasetConstructor('融資手数料 住宅性能評価物件',             'rgba(  2, 63,138,0.8)');
+var myhome_commission_other           = new datasetConstructor('融資手数料 その他物件',                   'rgba(  2, 63,138,0.8)');
 // 借り換え
-var conversion_21over                 = new datasetConstructor('借換 返済期間が21年以上', "rgba(2,63,138,0.8)");
-var conversion_20under                = new datasetConstructor('借換 返済期間が20年以下', "rgba(2,63,138,0.8)");
+var conversion_21over                 = new datasetConstructor('借換 返済21年以上', "rgba(2,63,138,0.8)");
+var conversion_20under                = new datasetConstructor('借換 返済20年以下', "rgba(2,63,138,0.8)");
 var conversion_commission_evaluation  = new datasetConstructor('借換 融資手数料 住宅性能評価物件', "rgba(2,63,138,0.8)");
 var conversion_commission_other       = new datasetConstructor('借換 融資手数料 その他物件', "rgba(2,63,138,0.8)");
 // つなぎ融資
