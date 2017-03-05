@@ -40,7 +40,7 @@ $.getJSON("data.json", function(json) {
     dates.push(value.date);
     myhome_9under_21over.data.push(value.myhome_9under_21over);
     myhome_9under_20under.data.push(value.myhome_9under_20under);
-    myhome_9over_21over_20160130.data.push(value.myhome_9over_21over_20160130);
+    myhome_9over_21over_20160129.data.push(value.myhome_9over_21over_20160129);
     myhome_9over_21over_20160130.data.push(value.myhome_9over_21over_20160130);
     myhome_9over_21under_20160129.data.push(value.myhome_9over_21under_20160129);
     myhome_9over_21under_20160130.data.push(value.myhome_9over_21under_20160130);
@@ -62,7 +62,7 @@ var config = {
     datasets: [
       myhome_9under_21over,
       myhome_9under_20under,
-      myhome_9over_21over_20160130,
+      myhome_9over_21over_20160129,
       myhome_9over_21over_20160130,
       myhome_9over_21under_20160129,
       myhome_9over_21under_20160130
