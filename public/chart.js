@@ -66,9 +66,6 @@ var myhome_9over_21under_20160129     = new datasetConstructor('融資率9割超
 var myhome_9over_21under_20160130     = new datasetConstructor('融資率9割超 返済20年以下 (16.1.30以降)',  'rgba( 75,192,192,0.8)');
 var myhome_commission_evaluation      = new datasetConstructor('融資手数料 住宅性能評価物件',             'rgba(  2, 63,138,0.8)');
 var myhome_commission_other           = new datasetConstructor('融資手数料 その他物件',                   'rgba(  2, 63,138,0.8)');
-// 借り換え
-var conversion_21over                 = new datasetConstructor('借換 返済21年以上',                       'rgba(  2, 63,138,0.8)');
-var conversion_20under                = new datasetConstructor('借換 返済20年以下',                       'rgba( 75,192,192,0.8)');
 var conversion_commission_evaluation  = new datasetConstructor('借換 融資手数料 住宅性能評価物件',        'rgba(  2, 63,138,0.8)');
 var conversion_commission_other       = new datasetConstructor('借換 融資手数料 その他物件',              'rgba(  2, 63,138,0.8)');
 // つなぎ融資
@@ -86,8 +83,6 @@ $.getJSON("data.json", function(json) {
     myhome_9over_21under_20160130.data.push(value.myhome_9over_21under_20160130);
     myhome_commission_evaluation.data.push(value.myhome_commission_evaluation);
     myhome_commission_other.data.push(value.myhome_commission_other);
-    conversion_21over.data.push(value.conversion_21over);
-    conversion_20under.data.push(value.conversion_20under);
     conversion_commission_evaluation.data.push(value.conversion_commission_evaluation);
     conversion_commission_other.data.push(value.conversion_commission_other);
     bridge_commission_basic.data.push(value.bridge_commission_basic);
@@ -95,7 +90,7 @@ $.getJSON("data.json", function(json) {
   });
 });
 
-// フラット35 融資率9割以下
+// フラット35 融資率9割以下・借り換え
 var config1 = {
   type: 'line',
   data: {
@@ -123,23 +118,9 @@ var config2 = {
   options: options
 };
 
-// 借り換え
-var config3 = {
-  type: 'line',
-  data: {
-    labels: dates,
-    datasets: [
-      conversion_21over,
-      conversion_20under
-    ]
-  },
-  options: options
-};
 window.onload = function() {
   var ctx1 = document.getElementById("canvas1").getContext("2d");
   window.myLine1 = new Chart(ctx1, config1);
   var ctx2 = document.getElementById("canvas2").getContext("2d");
   window.myLine2 = new Chart(ctx2, config2);
-  var ctx3 = document.getElementById("canvas3").getContext("2d");
-  window.myLine3 = new Chart(ctx3, config3);
 };
