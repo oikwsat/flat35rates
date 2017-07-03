@@ -103,5 +103,20 @@
     "conversion_commission_other":      0.66,
     "bridge_commission_basic":          54000,
     "bridge_commission_add":            0.40
+  },
+  {
+    "date":                             "Jul-17",
+    "myhome_9under_21over":             1.090,
+    "myhome_9under_20under":            1.030,
+    "myhome_9over_21over_20160129":     1.220,
+    "myhome_9over_21over_20160130":     1.160,
+    "myhome_9over_21under_20160129":    1.530,
+    "myhome_9over_21under_20160130":    1.470,
+    "myhome_commission_evaluation":     0.5,
+    "myhome_commission_other":          0.8,
+    "conversion_commission_evaluation": 0.55,
+    "conversion_commission_other":      0.66,
+    "bridge_commission_basic":          54000,
+    "bridge_commission_add":            0.40
   }
 ]
