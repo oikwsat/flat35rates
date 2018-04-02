@@ -60,10 +60,8 @@ var dates = Array();
 // フラット35
 var myhome_9under_21over              = new datasetConstructor('融資率9割以下 返済21年以上',              'rgba(  2, 63,138,0.8)');
 var myhome_9under_20under             = new datasetConstructor('融資率9割以下 返済20年以下',              'rgba( 75,192,192,0.8)');
-var myhome_9over_21over_20160129      = new datasetConstructor('融資率9割超 返済21年以上 (16.1.29迄)',    'rgba(139,  0,139,0.8)');
-var myhome_9over_21over_20160130      = new datasetConstructor('融資率9割超 返済21年以上 (16.1.30以降)',  'rgba(  2, 63,138,0.8)');
-var myhome_9over_21under_20160129     = new datasetConstructor('融資率9割超 返済20年以下 (16.1.29迄)',    'rgba(255,  0,255,0.8)');
-var myhome_9over_21under_20160130     = new datasetConstructor('融資率9割超 返済20年以下 (16.1.30以降)',  'rgba( 75,192,192,0.8)');
+var myhome_9over_21over_20160130      = new datasetConstructor('融資率9割超 返済21年以上 (16.1.30以降)',  'rgba(139,  0,139,0.8)');
+var myhome_9over_21under_20160130     = new datasetConstructor('融資率9割超 返済20年以下 (16.1.30以降)',  'rgba(255,  0,255,0.8)');
 var myhome_commission_evaluation      = new datasetConstructor('融資手数料 住宅性能評価物件',             'rgba(  2, 63,138,0.8)');
 var myhome_commission_other           = new datasetConstructor('融資手数料 その他物件',                   'rgba(  2, 63,138,0.8)');
 var conversion_commission_evaluation  = new datasetConstructor('借換 融資手数料 住宅性能評価物件',        'rgba(  2, 63,138,0.8)');
@@ -77,9 +75,7 @@ $.getJSON("data.json", function(json) {
     dates.push(value.date);
     myhome_9under_21over.data.push(value.myhome_9under_21over);
     myhome_9under_20under.data.push(value.myhome_9under_20under);
-    myhome_9over_21over_20160129.data.push(value.myhome_9over_21over_20160129);
     myhome_9over_21over_20160130.data.push(value.myhome_9over_21over_20160130);
-    myhome_9over_21under_20160129.data.push(value.myhome_9over_21under_20160129);
     myhome_9over_21under_20160130.data.push(value.myhome_9over_21under_20160130);
     myhome_commission_evaluation.data.push(value.myhome_commission_evaluation);
     myhome_commission_other.data.push(value.myhome_commission_other);
@@ -90,28 +86,14 @@ $.getJSON("data.json", function(json) {
   });
 });
 
-// フラット35 融資率9割以下・借り換え
-var config1 = {
+var config = {
   type: 'line',
   data: {
     labels: dates,
     datasets: [
       myhome_9under_21over,
-      myhome_9under_20under
-    ]
-  },
-  options: options
-};
-
-// フラット35 融資率9割超
-var config2 = {
-  type: 'line',
-  data: {
-    labels: dates,
-    datasets: [
-      myhome_9over_21over_20160129,
+      myhome_9under_20under,
       myhome_9over_21over_20160130,
-      myhome_9over_21under_20160129,
       myhome_9over_21under_20160130
     ]
   },
@@ -119,8 +101,6 @@ var config2 = {
 };
 
 window.onload = function() {
-  var ctx1 = document.getElementById("canvas1").getContext("2d");
-  window.myLine1 = new Chart(ctx1, config1);
-  var ctx2 = document.getElementById("canvas2").getContext("2d");
-  window.myLine2 = new Chart(ctx2, config2);
+  var ctx = document.getElementById("canvas").getContext("2d");
+  window.myLine = new Chart(ctx, config);
 };
