@@ -101,21 +101,22 @@
     "date":                             "Feb-18",
     "myhome_9under_21over":             1.120,
     "myhome_9under_20under":            1.040,
-    "myhome_9over_21over_20160130":     1.170,
+    "myhome_9over_21over_20160130":     1.560,
     "myhome_9over_21under_20160130":    1.470
   },
   {
     "date":                             "Mar-18",
     "myhome_9under_21over":             1.080,
     "myhome_9under_20under":            1.010,
-    "myhome_9over_21over_20160130":     1.140,
+    "myhome_9over_21over_20160130":     1.520,
     "myhome_9over_21under_20160130":    1.450
   },
   {
     "date":                             "Apr-18",
     "myhome_9under_21over":             1.070,
     "myhome_9under_20under":            1.020,
-    "myhome_9over_21over_20160130":     1.140,
+    "myhome_9over_21over_20160130":     1.510,
+    "myhome_9over_21under_20160130":    1.460
   },
   {
     "date":                             "May-18",
