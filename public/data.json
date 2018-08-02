@@ -138,5 +138,12 @@
     "myhome_9under_20under":            1.010,
     "myhome_9over_21over_20160130":     1.500,
     "myhome_9over_21under_20160130":    1.450
+  },
+  {
+    "date":                             "August-18",
+    "myhome_9under_21over":             1.060,
+    "myhome_9under_20under":            1.010,
+    "myhome_9over_21over_20160130":     1.500,
+    "myhome_9over_21under_20160130":    1.450
   }
 ]
